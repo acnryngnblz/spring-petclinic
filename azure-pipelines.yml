@@ -27,9 +27,9 @@ stages:
   jobs: 
   - deployment: VMDeploy
     displayName: web
-    environment:
-      name: '$(environmentName)'
-      resourceType: VirtualMachine
+    pool:
+      vmImage: 'Ubuntu-latest'
+    environment: 'springboot-dev'
     strategy:
         rolling:
           maxParallel: 2  #for percentages, mention as x%
