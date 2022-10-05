@@ -29,7 +29,7 @@ stages:
   - deployment: VMDeploy
     displayName: Web deploy
     environment:
-      name: $(environmentName)
+      name: SPRINGBOOT VM
       resourceType: VirtualMachine
     strategy:
       runOnce:
