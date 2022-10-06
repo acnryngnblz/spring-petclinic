@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 stages:
 - stage: Build
@@ -28,9 +28,9 @@ stages:
   - deployment: DeployWeb
     displayName: deploy Web App
     pool:
-      vmImage: 'Ubuntu-latest'
+      vmImage: 'Windows-latest'
     # creates an environment if it doesn't exist
-    environment: 'springboot-dev'
+    environment: 'springboot-dev.springboot-vm-w'
     strategy:
       runOnce:
         deploy:
